@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Price Calculation Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">Price Calculation Result</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Unit Price without VAT: <span th:text="${priceCalculation.priceWithoutVat}" class="font-weight-bold"></span></p>
+                        <p>VAT Amount: <span th:text="${priceCalculation.vatAmount}" class="font-weight-bold"></span></p>
+                        <p>Total Price without VAT: <span th:text="${priceCalculation.totalPriceWithoutVat}" class="font-weight-bold"></span></p>
+                        <p>Total VAT Amount: <span th:text="${priceCalculation.totalVatAmount}" class="font-weight-bold"></span></p>
+                        <p>Total Price with VAT: <span th:text="${priceCalculation.totalPriceWithVat}" class="font-weight-bold"></span></p>
+                        <p>Quantity: <span th:text="${priceCalculation.quantity}" class="font-weight-bold"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
